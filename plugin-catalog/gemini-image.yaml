@@ -1,0 +1,24 @@
+name: gemini-image
+repo: https://github.com/google-gemini/hermes-gemini-api-plugin
+sha: beacbc70156539826b287965e91876666f218d31
+description: >-
+  Native Google AI Studio Gemini (Nano Banana 2, Nano Banana 2 Lite, Nano Banana Pro) image
+  generation and multi-reference image editing backend (image_gen.provider = gemini), with
+  optional Google Search grounding and session token accounting. Disclosure — sends text prompts
+  and optional inline reference images over HTTPS to generativelanguage.googleapis.com (or a
+  configured image_gen.gemini.base_url) using GEMINI_API_KEY, reads caller-supplied reference
+  images through Hermes's SSRF and file-safety guards, and writes generated images to
+  $HERMES_HOME/cache/generated/images/.
+maintainer: google-gemini
+tier: official
+version: "0.1.0"
+category: tools
+docs_url: https://github.com/google-gemini/hermes-gemini-api-plugin#readme
+readme: true
+platforms: []
+capabilities:
+  provides_tools: []
+  provides_hooks: []
+  provides_middleware: []
+  requires_env:
+  - GEMINI_API_KEY
