@@ -88,6 +88,10 @@ Vertex requires the `google/` vendor prefix on model IDs. The `hermes model` pic
 
 | Model | ID |
 |-------|----|
+| Gemini 4 Neon | `google/gemini-4-neon` |
+| Gemini 4 Hydrogen | `google/gemini-4-hydrogen` |
+| Gemini 4 Carbon | `google/gemini-4-carbon` |
+| Gemini 4 Argon | `google/gemini-4-argon` |
 | Gemini 3.8 Flash | `google/gemini-3.8-flash` |
 | Gemini 3.7 Flash | `google/gemini-3.7-flash` |
 | Gemini 3.1 Pro Preview | `google/gemini-3.1-pro-preview` |
@@ -112,7 +116,7 @@ The Gemini 3.x preview models are served through the `global` endpoint. Regional
 
 ## Reasoning / Thinking
 
-Vertex exposes Gemini's thinking budget through the OpenAI-compatible surface. Hermes maps its reasoning-effort setting onto `extra_body.google.thinking_config` automatically, so `reasoning_effort` works the same way it does on other Gemini surfaces.
+Vertex exposes Gemini's thinking controls through the OpenAI-compatible surface. Hermes maps its reasoning-effort setting onto `extra_body.google.thinking_config` automatically, including `xhigh` for `google/gemini-4-neon` and `google/gemini-4-hydrogen` (when Hermes effort is `xhigh`, `max`, or `ultra`; Argon and Carbon keep `high`).
 
 ## Diagnostics
 
